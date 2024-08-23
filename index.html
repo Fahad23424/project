@@ -1,1008 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bussiness Web</title>
-    <!-- This link for search icon -->
+    <title>Body Fitness </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- This link is for ubuntu font style  -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- This link is for google fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-     />
-      <!--This link is for facebook,youtube,twitter icon  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+      /*CSS Reset*/
       body {
         margin: 0px;
-        background-color: #f3f2f2;
-      }
-      .right {
-        width: 13vw;
-        text-align: end;
-        margin: 16px 2px 0px 0px;
-      }
-      .left {
-        width: 10vw;
-        text-align: start;
-        margin: 16px 4px 0px 0px;
-      }
-      .left button {
-        font-size: 20px;
-        border: none;
-      }
-      .left button:hover {
-        cursor: pointer;
-      }
-      .head {
-        display: flex;
-        justify-content: center;
-      }
-      .mid h1 {
-        text-align: center;
-      }
-      .navbar li {
-        display: inline;
-      }
-      .navbar li a {
-        text-decoration: none;
-        color: black;
-        padding: 16px;
-        font-size: 20px;
+        padding: 0px;
+        background: url("imges/img.jpg");
+        color: white;
         font-family: "Ubuntu", sans-serif;
       }
-      .btn {
-        border: 2px solid black;
+      .left {
+        position: absolute;
+        top: 22px;
+        left: 60px;
+        display: inline-block;
+        /* border: 2px solid green; */
+      }
+      .left img {
+        width: 100px;
+      }
+      .left div {
         font-size: 20px;
-        padding: 13px 43px;
+        line-height: 19px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .mid {
+        width: 36%;
+        margin: 35px auto;
+        display: block;
+        /* border: 2px solid yellow; */
+      }
+      .right {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        display: inline-bock;
+        /* border: 2px solid blue; */
+      }
+      .navbar li {
+        display: inline-block;
+        /* font-size: 25px; */
+      }
+      .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 20px 30px;
+      }
+      .navbar li a.active,
+      .navbar li a:hover {
+        text-decoration: underline;
+        color: grey;
+      }
+      .btn {
+        font-family: "Ubuntu", sans-serif;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        margin: 0px 10px;
+        /* border: 2px solid yellow; */
+        border-radius: 10px;
+        font-size: 25px;
+        cursor: pointer;
       }
       .btn:hover {
-        cursor: pointer;
-        color: white;
-        background-color: black;
-      }
-      .column {
-        background-image: url(https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-latest-news-image-1-768x512.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 35vw;
-        height: 65vh;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding: 20px;
-        margin: 4px;
-      }
-      .set {
-        display: flex;
-        padding: 6px 2px 4px 4px;
-        margin: 0px 0px 6px 10px;
-        width: 38vw;
-      }
-      .set img {
-        width: 20vw;
-        height: 22vh;
-      }
-      .set div {
-        padding: 6px 2px 0px 10px;
-      }
-      .content {
-        margin: 25px 0px 0px 10px;
-        display: flex;
-        justify-content: center;
-      }
-      .bton {
-        background-color: rgb(61, 45, 45);
-        color: white;
-      }
-      .bton:hover {
+        background-color: aqua;
         color: black;
-        cursor: pointer;
       }
-      hr {
-        width: 78%;
-        display: flex;
-        justify-content: center;
+      .container {
+        /* border: 3px solid green ; */
+        width: 34%;
+        margin: 60px 40px;
+        padding: 40px 15px;
+        border-radius: 10px;
       }
-      .medium {
-        display: flex;
-        justify-content: space-evenly;
-        width: 87%;
-        margin: 0px 139px;
-      }
-      .Mid {
-        display: flex;
-        justify-content: space-evenly;
+      .form-group input {
+        text-align: center;
+        /* border: 2px solid green; */
+        display: block;
+        margin: 10px auto;
+        width: 400px;
         padding: 4px;
-        background-color: rgb(249 249 247);
+        border-radius: 10px;
+        font-size: 25px;
+        font-family: "Ubuntu", sans-serif;
       }
-      .tech1 {
-        /* border: 2px solid green ; */
-        width: 28vw;
-        text-align: start;
-        height: 20vh;
-        background-color: white;
-        padding: 30px;
-        margin: 2px 2px 2px 10px;
-      }
-      .tech1 input {
-        font-size: 20px;
-        padding: 18px;
-        margin: 4px 2px 0px 2px;
-      }
-
-      .tech {
-        width: 34vw;
-        margin: 2px 10px 2px 2px;
-      }
-
-      .tech img {
-        width: 41vw;
-      }
-      .device {
-        /* border: 3px solid green; */
-        width: 26vw;
-      }
-      .device img {
-        width: 25vw;
-      }
-      .tech3 {
-        display: flex;
-        justify-content: center;
-      }
-      .tech2 h1 {
-        width: 32.5vw;
+      .container h1 {
         text-align: center;
-        /* font-weight: bold;*/
-        font-size: 40px;
       }
-      .h {
-        color: rgb(121, 121, 250);
+      .container button {
+        width: 58%;
+        display: block;
+        margin: 15px auto;
       }
-      .h:hover {
-        cursor: pointer;
-      }
-      .start1 {
-        background-image: url(https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-latest-technology-news-image-1-768x512.jpg);
-        background-position:center;
-        background-size: cover;
-        width: 38vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding: 2px 4px 20px 20px;
-        overflow: hidden;
-        opacity: 1;
-        z-index: 10;
-      }
-      .start2 {
-        background-image: url(https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-latest-technology-news-image-2-768x512.jpg);
-        background-position: center;
-        background-size: cover;
-        width: 37vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding: 2px 4px 20px 20px;
-        opacity: 1;
-        z-index: 10;
-        overflow: hidden;
-      }
-      .start {
-        display: flex;
-        justify-content: center;
-        color: white;
-        margin: 2px 50px 10px 41px;
-      }
-      .tech4 h1 {
-        width: 36vw;
-        text-align: center;
-        font-size: 40px;
-      }
-      .a:hover {
-        cursor: pointer;
-        color: rgb(10, 10, 10);
-      }
-      .tech5 {
-        display: flex;
-        justify-content: center;
-      }
-      .tfirst {
-        padding: 4px 50px 4px 50px;
-      }
-      .tsecond {
-        display: flex;
-        padding: 4px 50px 4px 50px;
-        width: 36vw;
-      }
-      .start4 {
-        background-image: url(https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-guest-posts-image-2-768x512.jpg);
-        background-position: center;
-        background-size: cover;
-        width: 37vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding: 2px 4px 20px 20px;
-        opacity: 1;
-        z-index: 10;
-        overflow: hidden;
-      }
-      .start3 {
-        background-image: url(https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-guest-posts-image-1-768x512.jpg);
-        background-position: center;
-        background-size: cover;
-        width: 38vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        padding: 2px 4px 20px 20px;
-        opacity: 1;
-        z-index: 10;
-        overflow: hidden;
-      }
-      .box {
-        display: flex;
-        padding: 10px 40px 10px 30px;
-        width: 35vw;
-        background-color:white;
-      }
-      .box img
-      {
-        padding: 2px 10px 4px 4px;
-      }
-      .tech6 {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 10px 10px 200px ;
-        /* border: 3px solid green; */
-        height: 18vh;
-        align-items: center;
-        width: 78vw;
-        background-color: white;
-        
-
-      
-      }
-      .tech6 button
-      {
-        border: 2px solid black;
-        height: 6vh;
-        width: 10vw;
-        font-size: 20px;
-        background-color: white;
-        
-      }
-      .tech6 button:hover
-      {
-        background-color: black;
-      }
-      .Guest
-      {
-        padding: 30px 30px 2px 20px ;
-      }
-      .section
-      {
-         width: 55vw;
-         display: flex;
-         padding: 10px 2px 10px 10px ;
-      }
-      .section img
-      {
-        width: 22vw;
-      }
-      .section1
-      {
-        padding: 20px 5px 10px 30px;
-      }
-      .head1
-      {
-        width: 27vw;
-        text-align: center;
-        font-size: 38px;
-      }
-      .part
-      {
-        display: flex;
-        
-      }
-      .part1
-      {
-        padding: 6px 8px 10px 10px ;
-        margin: 6px 28px 36px 10px ;
-      }
-      .tech7
-      {
-        display: flex;
-        justify-content: center;
-      }
-      .tech8
-      {
-       width: 25vw;
-      }
-      .part2
-      {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .key
-      {
-         display: flex;
-         padding: 80px 40px 30px 40px ;
-
-
-      }
-      .key1
-      { 
-        padding: 80px 40px 30px 40px ;
-       
-      }
-      .tech9
-      {
-        border:2px solid black;
-        height: 20vh;
-        width: 78vw;
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        margin: 10px 20px 10px 187px;
-      }
-       .key1 input {
-        font-size: 20px;
-        padding: 18px;
-        margin: 4px 2px 0px 2px;
-        }
-        .key div
-        {
-          padding: 2px 4px 2px 10px ;
-        }
-        .tech10
-        {
-          display: flex;
-          justify-content:space-around ;
-          /* border: 3px solid green; */
-        }
-        .board
-        {
-          display: flex;
-          align-items: center;
-          justify-content:space-between;
-          width:50vw;
-          font-size: 20px;
-          font-family:"Ubuntu", sans-serif;
-          color: blue;
-          margin: 2px 40px 2px 4px;
-
-        }
-        .board:hover
-        {
-          cursor:pointer;
-        }
-        .foot
-        {
-          width:10vw;
-          text-align: center;
-        }
-        .tech11
-        {
-          display: flex;
-          justify-content: space-evenly;
-          width: 90vw;
-        }
-        .tech12
-         {
-            /* width: 80vw; */
-            display: flex;
-            justify-content: space-around;
-         }
-         .copy
-         {
-          width: 41vw;
-           text-align: start; 
-         }
-         .right
-         {
-            width: 20vw; 
-            text-align: end;
-         }
-         .custom
-         {
-          background-color: white;
-          width: 10vw;
-          height: 5vh;
-         }
     </style>
   </head>
-
   <body>
-    <!-- <div class="custom">customize</div> -->
-    <header class="head">
+    <header class="header">
+      <!-- left for my  website name and logo  -->
       <div class="left">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <img src="imges/image.png" alt="no " />
+        
       </div>
+      <!-- mid for navigation bar  -->
       <div class="mid">
-        <h1>BUSINESSLY</h1>
         <ul class="navbar">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Stock Market</a></li>
-          <li><a href="#">Technologies</a></li>
-          <li><a href="#">Politics</a></li>
-          <li><a href="#">Automobile</a></li>
-          <li><a href="#">Health</a></li>
-          <li><a href="#">Interactive Session</a></li>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Calculator</a></li>
+          <li><a href="#">Contact us </a></li>
         </ul>
       </div>
+      <!-- right for buttons -->
       <div class="right">
-        <button class="btn">Subscribe</button>
+        <button class="btn">call us</button>
+        <button class="btn">Email us</button>
       </div>
     </header>
-    <div class="content">
-      <div class="column">
-        <div>
-          <button type="submit" class="bton">Stock Market</button><br />
+    <div class="container">
+      <h1>Join the best gym in Islamabad</h1>
+      <form action="non.php">
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your name " />
         </div>
-        <div style="font-size: 35px; font-weight: bold">
-          15 Shocking Elon Musk Tweets About<br />
-          Stock Market<br />
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your age " />
         </div>
-        <div>akbarh June 28, 2021</div>
-      </div>
-      <div class="row">
-        <div class="set">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-latest-news-image-2-768x512.jpg"
-            alt="No"
-          />
-          <div>
-            <div><button type="submit" class="bton">Technology</button></div>
-            <div style="font-size: 25px; font-weight: bold">
-              Want a Career in<br />
-              Technology? Make This Your<br />
-              Secret Weapon
-            </div>
-            <div><br />June 28, 2021</div>
-          </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your gender " />
         </div>
-        <div class="set">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-latest-news-image-3-768x512.jpg"
-            alt="No"
-          />
-          <div>
-            <div><button type="submit" class="bton">Health</button></div>
-            <div style="font-size: 25px; font-weight: bold">
-              The Health Industry Is<br />
-              Changing Fast. Here's How to<br />
-              Keep Pace
-            </div>
-            <div><br />June 28, 2021</div>
-          </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your locality " />
         </div>
-        <div class="set">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-latest-news-image-4-768x512.jpg"
-            alt="No"
-          />
-          <div>
-            <div><button type="submit" class="bton">Technology</button></div>
-            <div style="font-size: 25px; font-weight: bold">
-              Everything You Ever Wanted<br />
-              to Know About Technology
-            </div>
-            <div><br />June 28, 2021</div>
-          </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your phone number" />
         </div>
-      </div>
-    </div>
-    <br /><br /><br />
-    <hr />
-    <br /><br /><br />
-    <div class="medium">
-      <div>
-        <div>Editors Pick | Politics <br /></div>
-        <div style="font-size: 20px; font-weight: bold">
-          The Frightening Affect <br />of Climate Change on<br />
-          Government
-        </div>
-      </div>
-      <div>
-        <div>Editors Pick | Stock Market <br /></div>
-        <div style="font-size: 20px; font-weight: bold">
-          The Ultimate Guide to<br />
-          Stock Market
-        </div>
-      </div>
-      <div>
-        <div>Editors Pick |Politics <br /></div>
-        <div style="font-size: 20px; font-weight: bold">
-          Don't Share This<br />
-          Politics Insider Secret
-        </div>
-      </div>
-      <div>
-        <div>Editors Pick |Technology <br /></div>
-        <div style="font-size: 20px; font-weight: bold">
-          All Your Burning <br />Technology Questions,<br />
-          Answered
-        </div>
-      </div>
-      <div>
-        <div>Editors Pick |Stock Market <br /></div>
-        <div style="font-size: 20px; font-weight: bold">
-          15 Unbelievable Things <br />You Never Knew About<br />
-          Stock Market
-        </div>
-      </div>
-      <div>
-        <div>Automobile |Editors Pick <br /></div>
-        <div style="font-size: 20px; font-weight: bold">
-          Automobile: All the<br />
-          Stats, Facts, and Data<br />
-          You'll Ever Need to<br />
-          Know
-        </div>
-      </div>
-    </div>
-    <div class="Mid">
-      <div class="tech">
-        <img
-          src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/07/business-blog-wide-promo-banner.jpg"
-          alt="no"
-        />
-      </div>
-      <div class="tech1">
-        <h2>Subscribe To Our Newsletter</h2>
-        <div>
-          Egestas eu molestie lacus, rhoncus, gravida aliquet sociis
-          <br />vulputate faucibus tristique odio
-        </div>
-        <input type="text" placeholder="Email Address" />
-        <button class="btn">Subscribe</button>
-      </div>
-    </div>
-    <div class="tech2">
-      <h1>Stock Market</h1>
-      <div class="tech3">
-        <div class="device">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-stock-market-news-image-1-768x512.jpg"
-            alt="No"
-          />
-          <div class="h"><br />Stock Market</div>
-          <br />
-          <div style="font-size: 28px; font-weight: bold">
-            What Your Relationship With <br />Stock Market Says About You
-          </div>
-          <br />
-          <div>akbarh June 28, 2021</div>
-          <br />
-          <div style="font-size: 20px">
-            Cursus iaculis etiam in In nullam donec sem sed<br />
-            consequat scelerisque nibh amet, massa egestas <br />
-            risus, gravida vel amet, imperdiet ...
-          </div>
-        </div>
-        <div class="device">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-stock-market-news-image-2-768x512.jpg"
-            alt="No"
-          />
-          <br />
-          <div class="h"><br />Stock Market</div>
-          <br />
-          <div style="font-size: 28px; font-weight: bold">
-            How I Learned to Stop <br />Worrying and Love Stock <br />Market
-          </div>
-          <br />
-          <div>akbarh June 28, 2021</div>
-          <br />
-          <div style="font-size: 20px">
-            Cursus iaculis etiam in In nullam donec sem sed<br />
-            consequat scelerisque nibh amet, massa egestas <br />
-            risus, gravida vel amet, imperdiet ...
-          </div>
-        </div>
-        <div class="device">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-stock-market-news-image-3-768x512.jpg"
-            alt="No"/>
-          <br />
-          <div class="h"><br />Stock Market</div>
-          <br />
-          <div style="font-size: 28px; font-weight: bold">
-            Why Stock Market Affects Men<br />
-            and Women Differently
-          </div>
-          <br />
-          <div>akbarh June 28, 2021</div>
-          <br />
-          <div style="font-size: 20px">
-            Cursus iaculis etiam in In nullam donec sem sed<br />
-            consequat scelerisque nibh amet, massa egestas <br />
-            risus, gravida vel amet, imperdiet ...
-          </div>
-        </div>
-      </div>
-    </div>
-    <br /><br /><br />
-    <hr />
-    <div class="tech4">
-      <h1>Latest Technology</h1>
-      <div class="start">
-        <div class="start1">
-          <div class="a">Technology</div>
-          <div style="font-size: 35px; font-weight: bold">
-            This Will Fundamentally Change the <br />Way You Look at Technology
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-        </div>
-        <div class="start2">
-          <div class="a">Technology</div>
-          <div style="font-size: 35px; font-weight: bold">
-            Technology Changed My Life. Here's<br />
-            My Story
-          </div>
-          <div><br />akbarh June 28, 2021a</div>
-        </div>
-      </div>
-    </div>
-    <br /><br /><br /><br />
-    <hr />
-    <br /><br /><br /><br />
-    <div class="tech2">
-      <h1 style="width: 27.5vw">Politics</h1>
-      <div class="tech3">
-        <div class="device">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-politic-news-image-1-768x512.jpg"
-            alt="No"
-          />
-          <div class="h"><br />Politics</div>
-          <div style="font-size: 28px; font-weight: bold">
-            <br />The Joy, Comfort, and Stress-<br />Reducing Power of Politics
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-          <div style="font-size: 20px">
-            <br />Cursus iaculis etiam in In nullam donec sem sed<br />
-            consequat scelerisque nibh amet, massa egestas <br />
-            risus, gravida vel amet, imperdiet ...
-          </div>
-        </div>
-        <div class="device">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-politic-news-image-2-768x512.jpg"
-            alt="No"
-          />
-          <div class="h"><br />Politics</div>
-          <div style="font-size: 28px; font-weight: bold">
-            <br />What Politics Says About Your<br />
-            Personal Style
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-          <div style="font-size: 20px">
-            <br />Cursus iaculis etiam in In nullam donec sem sed<br />
-            consequat scelerisque nibh amet, massa egestas <br />
-            risus, gravida vel amet, imperdiet ...
-          </div>
-        </div>
-        <div class="device">
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-politic-news-image-3-768x512.jpg"
-            alt="No"
-          />
-          <div class="h"><br />Politics</div>
-          <div style="font-size: 28px; font-weight: bold">
-            <br />8 Surprising Ways Politics Can<br />Affect You
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-          <div style="font-size: 20px">
-            <br />Cursus iaculis etiam in In nullam donec sem sed<br />
-            consequat scelerisque nibh amet, massa egestas <br />
-            risus, gravida vel amet, imperdiet ...
-          </div>
-        </div>
-      </div>
-    </div>
-    <br /><br /><br /><br />
-    <hr />
-    <br /><br /><br /><br />
-    <div class="tech5">
-      <div class="tfirst">
-        <h1>Automobile</h1>
-        <img
-          src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-editor-pick-img-6-768x512.jpg"
-          alt="No"
-          style="width: 36vw"
-        />
-        <div class="h"><br />Automobile</div>
-        <div style="font-size: 28px; font-weight: bold">
-          <br />Automobile: All the Stats, Facts, and Data You'll<br />
-          Ever Need to Know
-        </div>
-        <div><br />akbarh June 28, 2021</div>
-        <div style="font-size: 20px">
-          <br />Cursus iaculis etiam in In nullam donec sem sed<br />
-          consequat scelerisque nibh amet, massa egestas <br />
-          risus, gravida vel amet, imperdiet ...
-        </div>
-      </div>
-      <div class="tfirst">
-        <h1>Health</h1>
-        <img
-          src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-health-news-image-1-768x512.jpg"
-          alt="No"
-          style="width: 36vw"
-        />
-        <div class="h"><br />Health</div>
-        <div style="font-size: 28px; font-weight: bold">
-          <br />The Top 11 Traits Health Ceos Have in Common
-        </div>
-        <div><br />akbarh June 28, 2021</div>
-        <div style="font-size: 20px">
-          <br />Cursus iaculis etiam in In nullam donec sem sed<br />
-          consequat scelerisque nibh amet, massa egestas <br />
-          risus, gravida vel amet, imperdiet ...
-        </div>
-      </div>
-    </div>
-    <br /><br /><br /><br />
-    <div class="tech5">
-      <div class="tsecond">
-        <div>
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-automobile-news-image-1-768x512.jpg"
-            alt="No"
-            style="width: 18vw"
-          />
-          <div class="h"><br />Automobile</div>
-          <div style="font-size: 28px; font-weight: bold">
-            <br />How Millennials Are <br />Disrupting <br />Automobile
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-          <div style="font-size: 20px">
-            <br />Cursus iaculis etiam in In nullam<br />
-            donec sem sed consequat scelerisque<br />
-            nibh amet, massa egestas risus, ..
-          </div>
-        </div>
-        <div>
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-automobile-news-image-2-768x512.jpg"
-            alt="No"
-            style="width: 18vw"
-          />
-          <div class="h"><br />Automobile</div>
-          <div style="font-size: 28px; font-weight: bold">
-            <br />7 Answers to the Most<br />
-            Frequently Asked <br />Questions About<br />
-            Automobile
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-          <div style="font-size: 20px">
-            <br /><br />Cursus iaculis etiam in In nullam<br />
-            donec sem sed consequat scelerisque<br />
-            nibh amet, massa egestas risus, ..
-          </div>
-        </div>
-      </div>
-      <div class="tsecond">
-        <div>
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-health-news-image-2-768x512.jpg"
-            alt="No"
-            style="width: 18vw"
-          />
-          <div class="h"><br />Health</div>
-          <div style="font-size: 28px; font-weight: bold">
-            <br />15 Counterintuitive <br />Tips for Crushing <br />Your Health
-            Goals
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-          <div style="font-size: 20px">
-            <br />Cursus iaculis etiam in In nullam<br />
-            donec sem sed consequat scelerisque<br />
-            nibh amet, massa egestas risus, ..
-          </div>
-        </div>
-        <div>
-          <img
-            src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-health-news-image-3-768x512.jpg"
-            alt="No"
-            style="width: 18vw"
-          />
-          <div class="h"><br />Health</div>
-          <div style="font-size: 28px; font-weight: bold">
-            <br />The Most Beloved <br />
-            Health Products, <br />
-            According to <br />
-            Reviewers
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-          <div style="font-size: 20px">
-            <br />Cursus iaculis etiam in In nullam<br />
-            donec sem sed consequat scelerisque<br />
-            nibh amet, massa egestas risus, ..
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="tech4">
-      <h1 style="width: 32vw">Guests Posts</h1>
-      <div class="start">
-        <div class="start3">
-          <div class="a">Guests Posts &nbsp| &nbspHealth</div>
-          <div style="font-size: 35px; font-weight: bold">
-            How Health Businesses Can Survive <br />in a Post Coronaconomy
-          </div>
-          <div><br />akbarh June 28, 2021</div>
-        </div>
-        <div class="start4">
-          <div class="a">Guests Posts &nbsp|&nbsp Health</div>
-          <div style="font-size: 35px; font-weight: bold">
-            Fact Check: 12 Common <br />Misconceptions About Stock Market
-          </div>
-          <div><br />akbarh June 28, 2021a</div>
-        </div>
-      </div>
-    </div>
-    <br><br><br>
-    <div class="tech6">
-      <div class="box">
-        <img
-          src="elementor.png"
-          alt="no image"
-          style="width: 50px; height: 50px"
-        />
-        <div>
-          <div style="font-size: 35px; font-weight: bold">
-            Your posts will be the next
-          </div>
-          <div style="font-size: 20px">
-            Egestas suspendisse bibendum tempus cursus pulvinar eget odio
-            ultricies augue.
-          </div>
-        </div>
-      </div>
-      <div class="Guest">
-        <button>Be A Guest Author</button>
-      </div>
-    </div>
-    <br><br><br>
-    <h1 class="head1">Must Read</h1>
-    <div class="tech7">
-        <div>
-        <div class="section">
-             <img src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-must-read-news-image-1-768x512.jpg" alt="No">
-             <div class="section1">
-                 <div>Must Read &nbsp | &nbsp Stock Market</div>
-                <div style="font-size: 28px; font-weight: bold"><br>The Incredible Stock Market <br>Product I Can't Live Without</div>
-                <div style="font-size: 20px">Cursus iaculis etiam in In nullam donec sem sed <br> consequat scelerisque nibh amet, massa egestas<br> risus, gravida vel amet, imperdiet.. </div>
-                <div><br>akbarh June 25, 2021</div>
-             </div>
-        </div>
-        <div class="section">
-            <img src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-must-read-news-image-2-768x512.jpg" alt="No">
-            <div class="section1">
-               <div>Health &nbsp | &nbsp Must read</div>
-               <div style="font-size: 28px; font-weight: bold"><br> Powerful Habits to Master for <br>Success in Health</div>
-               <div style="font-size: 20px">Cursus iaculis etiam in In nullam donec sem sed <br> consequat scelerisque nibh amet, massa egestas<br> risus, gravida vel amet, imperdiet ...</div>
-               <div><br>akbarh June 25, 2021</div>
-            </div>
-        </div>
-        <div class="section">
-             <img src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-must-read-news-image-3-768x512.jpg" alt="No">
-             <div class="section1">
-                 <div>Must Read &nbsp | &nbsp Technology</div>
-                 <div style="font-size: 28px; font-weight: bold"><br>10 Global Trends That Will <br>Affect Technology in 2022</div>
-                  <div style="font-size: 20px">Cursus iaculis etiam in In nullam donec sem sed <br> consequat scelerisque nibh amet, massa egestas<br> risus, gravida vel amet, imperdiet ...</div>
-                  <div><br>akbarh June 25, 2021</div>
-            </div>
-        </div>
-        </div>
-        <div class="tech8">
-         <div class="part2">
-          <h2>Stay Connnected</h2>
-           <div class="part">
-               <div class="part1">
-                    <img src="https://static.vecteezy.com/system/resources/previews/016/716/481/non_2x/facebook-icon-free-png.png" alt="No" style="width: 2vw;">
-                    <div style="font-weight: bold; font-size: 25px;">204,640</div>
-                    <div style="font-size: 20px;">Fans</div>
-              </div>
-               
-                <div class="part1">
-                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJefYcPLihUBQy-HkjT-t7qlOhn6QeHY7oTA&s" alt="No"  style="width: 2vw;">
-                     <div style="font-weight: bold; font-size: 25px;">164,408</div>
-                      <div style="font-size: 20px;">Followers</div>
-              </div>
-              <div class="part1">
-                     <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-youtube-social-media-icon-png-image_6315995.png" alt="No" style="width: 3vw;">
-                     <div style="font-weight: bold; font-size: 25px;">320,228</div>
-                      <div style="font-size: 20px;">Subscribers</div>
-              </div>
-           </div>
-           </div>
-           <div>
-           <img src="https://websitedemos.net/business-blog-04/wp-content/uploads/sites/895/2021/06/business-blog-promo-news-image-2.jpg" alt="No" style="width: 23vw; height: 50vh;">
-           </div>
-
+        <div class="form-group">
+          <input type="text" name="" placeholder="Enter your email " />
         </div>
 
+        <button class="btn">Submit</button>
+      </form>
     </div>
-    <br><br><br>
-    <div class="tech9">
-       <div class="key">
-           <div>
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbpFrMU3ISlCPUd40c0ZjfrEwFQZU3K6t4oA&s" alt="No" style="width: 2vw;">
-           </div>
-        <div>
-                <div style="font-size: 40px; font-weight: bold">Sign up for our newsletters</div>
-                <div style="font-size: 20px; font-family: Ubuntu";>The best of Business news, in your inbox.</div>
-       </div>
-       </div>
-       <div class="key1">
-        <input type="text" placeholder="Email Address"/>
-        <button class="btn">Subscribe</button>
-       </div>
-    </div>
-     <br><br><br>
-    <div class="tech10">
-      <div class="foot">
-      <h1>BUSINESSLY</h1>
-      </div>
-      <div class="board"> 
-        <div>Home</div>
-        <div>Stock Market</div>
-        <div>Technology</div>
-        <div>Politics</div>
-        <div>Automobile</div>
-        <div>Health</div>
-        <div>Interactive session</div>
-      </div>
-
-    </div>
-    <br><br><br>
-    <hr>
-    <br><br><br>
-    <div class="tech11">
-        <div>
-        <h3 style="font-size: 25px; font-weight: bold">About</h3>
-        <div style="font-size: 20px; font-family: Ubuntu";><br>Turpis erat tincidunt et viverra id<br> nunc molestie et faucibus diam, proin <br> lectus aliquam mattis ac nunc <br> elementum accumsan libero.</div>
-        </div>
-        <div>
-          <h3 style="font-size: 25px; font-weight: bold">Company</h3>
-          <div style="font-size: 20px; font-family: Ubuntu";><br>About Us <br>Contact Us <br>Our Staff <br> Advertise</div>
-        </div>
-        <div>
-          <h3 style="font-size: 25px; font-weight: bold">Legal</h3>
-          <div style="font-size: 20px ;font-family: Ubuntu";><br>Privacy Policy <br>Terms Of Service<br>Extra Crunch Terms<br>Code of conduct</div>
-        </div>
-        <div>
-          <h3 style="font-size: 25px; font-weight: bold">Follow Us</h3>
-          <div style="font-size: 20px ;font-family: Ubuntu";><br>Facebook <br>Youtube <br>Twitter <br>Instagram</div>
-        </div>
-    </div>
-    <br><br><br><br><br><br><br><br>
-    <div class="tech12">
-      <div class="copy">Copyright © 2024 Business Blog</div>
-      <div class="right">Powered by Business Blog</div>
-    </div>
-    <br><br><br><br><br>
   </body>
 </html>
